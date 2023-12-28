@@ -323,6 +323,7 @@ export const enum SyntaxType {
 }
 
 export type UnnamedType =
+  | never
   | "!"
   | "!="
   | "!=="

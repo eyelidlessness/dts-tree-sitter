@@ -204,6 +204,7 @@ function generateTypeEnum(json: NodeTypeEntry[], { typeNames }: IndexedData, pri
         .println()
         .println('export type UnnamedType =')
         .indent()
+        .println('| never')
         .forEach(json, entry => {
             if (!entry.named) {
                 let name = typeNames.get(entry.type);
