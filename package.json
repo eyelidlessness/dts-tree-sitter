@@ -3,12 +3,12 @@
     "version": "0.1.0",
     "description": "Generates TypeScript .d.ts files for using tree-sitter grammars.",
     "dependencies": {
-        "tree-sitter": "^0.16.1"
+        "tree-sitter": "^0.20.6"
     },
     "devDependencies": {
-        "@types/node": "^14.0.14",
-        "tree-sitter-javascript": "^0.16.0",
-        "typescript": "^3.9.6"
+        "@types/node": "^20.10.5",
+        "tree-sitter-javascript": "^0.20.1",
+        "typescript": "^5.3.3"
     },
     "scripts": {
         "watch": "tsc -p .; tsc -p . -w",
