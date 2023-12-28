@@ -337,7 +337,7 @@ function main() {
         console.error(usageText);
         process.exit(1);
     }
-    let locations = getLookupLocations(args[0]); 
+    let locations = getLookupLocations(args[0]);
     let filename = locations.find(fileExists);
     let treeSitterDtsText = getTreeSitterDts();
     if (filename == null) {
