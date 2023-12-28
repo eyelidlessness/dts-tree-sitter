@@ -139,7 +139,7 @@ export interface Query {
   readonly assertedProperties: any[];
   readonly refutedProperties: any[];
 
-  constructor(language: any, source: string | Buffer);
+  constructor(language: any, source: string | Buffer): this;
 
   matches(rootNode: SyntaxNode, startPosition?: Point, endPosition?: Point): QueryMatch[];
   captures(rootNode: SyntaxNode, startPosition?: Point, endPosition?: Point): QueryCapture[];

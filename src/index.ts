@@ -288,6 +288,7 @@ function generateModifiedTreeSitterDts(json: NodeTypeEntry[], dtsText: string, p
         .replace(/namespace Parser {(.*)}/s, (str, p1) => p1.replace(/^  /gm, ''))
         .replace(/^\s*(class|interface|namespace)/gm, 'export $1')
         .replace(/\bexport class\b/g, 'export interface')
+        .replace(/(^\s*constructor\([^)]*\));(.*$)/gm, '$1: this;$2')
         .replace(/\bParser\.(\w+)\b/g, "$1")
         .replace('export interface SyntaxNode', 'interface SyntaxNodeBase')
         .replace(/closest\(\w+:.*\): SyntaxNode \| null;/,
