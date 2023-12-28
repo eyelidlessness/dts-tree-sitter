@@ -60,7 +60,7 @@ function getMemberNames(node: g.ClassDeclarationNode) {
     for (let member of node.bodyNode.memberNodes) {
         if (member.type === g.SyntaxType.MethodDefinition) {
             result.push(member.nameNode.text);
-        } else {
+        } else if (member.type !== g.SyntaxType.ClassStaticBlock) {
             result.push(member.propertyNode.text);
         }
     }
